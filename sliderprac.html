@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #rBtn,
+    #lBtn {
+        margin: auto;
+        padding: 3%;
+        background-color: burlywood;
+        color: brown;
+    }
+
+    #box {
+        width: 200px;
+        height: 150px;
+        background-color: aquamarine;
+        color: black;
+        font-size: larger;
+        text-align: center;
+        padding: 3%;
+        margin: auto;
+
+        position: relative;
+        left: 0px;
+        animation-name: a;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: alternate;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes animR {
+        0% {
+            left: 0px;
+        }
+
+        100% {
+            left: 300px;
+        }
+    }
+
+    @keyframes animL {
+        0% {
+            right: 0px;
+        }
+
+        100% {
+            right: 300px;
+        }
+    }
+</style>
+
+
+
+<body>
+    <button id="lBtn">move Left</button>
+    <button id="rBtn">move Right</button>
+    <div id="box">
+        animate me
+    </div>
+</body>
+
+
+
+
+<script>
+    // var rbtn = document.getElementById('rBtn');
+    // rbtn.addEventListener('click', function () {
+    //     var b1 = document.getElementById('box');
+    //     box.style.animationName = 'none';
+    //     box.offsetHeight;
+
+    //     b1.style.animationName = 'animR';
+
+    // });
+
+    // var lbtn = document.getElementById('lBtn');
+    // lbtn.addEventListener('click', function () {
+    //     var b1 = document.getElementById('box');
+    //     box.style.animationName = 'none';
+    //     box.offsetHeight;
+
+    //     b1.style.animationName = 'animL';
+
+    // });
+    // var box = document.getElementById('box') ;
+    // console.log(window.getComputedStyle(box).getPropertyValue('left'))
+    
+    // lbtn.addEventListener('click', function () {
+    //     var computedStyle = window.getComputedStyle(box);
+
+    //     var left = parseInt(computedStyle.getPropertyValue('left'));
+
+    //     if (left<= 300 && left>= -200) {
+    //         box.style.left = (left - 200) + 'px';
+    //     }
+    // });
+    
+
+</script>
+
+</html>

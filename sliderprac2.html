@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #btnR {
+        margin: 0%;
+        padding: 2%;
+        color: black;
+        background-color: aquamarine;
+    }
+
+    #btnL {
+        margin: 0%;
+        padding: 2%;
+        color: black;
+        background-color: aquamarine;
+    }
+
+    .box {
+        
+        margin: 1% 2%;
+        color: black;
+        background-color: cornflowerblue;
+        padding: 4%;
+        width: 200px;
+        position: relative;
+        left: 0px;
+        transition: all ease-in-out 0.4s;
+        display: inline-block;
+
+    }
+</style>
+
+
+<body>
+    <button id="btnL">
+        left
+    </button>
+    <button id="btnR">
+        right
+    </button>
+    <div style="margin-top: 5%;">
+        <div class="box">
+            I am a box
+        </div>
+        <div class="box">
+            I am a box 2
+        </div>
+    </div>
+</body>
+
+
+<script>
+
+    var btnR = document.getElementById('btnR');
+
+    btnR.addEventListener('click', function () {
+        var box = document.querySelectorAll('.box');
+        var left = parseInt(box[0].style.left) || 0;
+        for (var i = 0; i < box.length; i++){
+            box[i].style.left = (left + 200) + 'px';
+            if (parseInt(box[i].style.left) == 200)
+            box[i].style.transform = 'scale(2)' ;
+            else
+            box[i].style.transform = 'scale(1)' ;
+
+            
+
+        }
+
+    })
+
+    btnL.addEventListener('click', function () {
+        var box = document.querySelectorAll('.box');
+        var left = parseInt(box[0].style.left) || 0;
+        for (var i = 0; i < box.length; i++) {
+            box[i].style.left = (left - 200) + 'px';
+        }
+    })
+
+
+</script>
+
+</html>
